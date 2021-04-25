@@ -7,8 +7,20 @@
 # ====
 
 def twice_as_old(dad_years_old, son_years_old):
-    subtrac = int(dad_years_old) - int(son_years_old)
-    years_ago = int(subtrac) - int(son_years_old)
-    print("The father was twice as old as his son " +years_ago+" years ago" )
 
-print(twice_as_old(34, 16))
+    if dad_years_old > son_years_old * 2:
+        compare = dad_years_old - son_years_old
+        years_ago = compare - son_years_old
+        print("The father was twice as old as his son after " +str(years_ago)+" years.")
+    
+    elif dad_years_old < son_years_old * 2:
+        compare = dad_years_old - son_years_old
+        years_ago = son_years_old - compare
+        print("The father was twice as old as his son " +str(years_ago)+" years ago.")
+    elif dad_years_old == son_years_old * 2:   
+        print("The father is twice as old as his son.")
+    else:
+        return 0
+
+
+twice_as_old(36, 7)
